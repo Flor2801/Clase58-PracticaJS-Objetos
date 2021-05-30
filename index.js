@@ -265,12 +265,13 @@ const ganadoras = [
 
 
 const mostrarGanadoras = (array) => {
-    for (let i=0 ; i < array.lenght ; i++) {
+    for (let i=0 ; i < array.length ; i++) {
    console.log(`${array[i].nombre} ganó la temporada ${array[i].temporada}`)
     }
 }
 
 mostrarGanadoras(ganadoras)
+
 
 
 
@@ -319,13 +320,14 @@ calcularDuracionTotal(nevermind)
 // Crear una funcion que muestre en consola cada banda del array, con la siguiente lógica:
 // Si la banda está activa mostrar el mensaje: "[NOMBRE DE LA BANDA] está activa desde el año [AÑO DE FUNDACIÓN]"
 // Si la banda NO está activa mostrar el mensaje: "[NOMBRE DE LA BANDA] no está activa"
-// const bandas = [
-//   { id: 1, nombre: "Nirvana", fundacion: 1987, activa: false },
-//   { id: 2, nombre: "Foo Fighters", fundacion: 1994, activa: true },
-//   { id: 3, nombre: "Led Zeppelin", fundacion: 1967, activa: false },
-//   { id: 3, nombre: "Queens of the Stone Age", fundacion: 1997, activa: true },
-//   { id: 3, nombre: "Pearl Jam", fundacion: 1990, activa: true },
-// ];
+
+const bandas = [
+  { id: 1, nombre: "Nirvana", fundacion: 1987, activa: false },
+  { id: 2, nombre: "Foo Fighters", fundacion: 1994, activa: true },
+  { id: 3, nombre: "Led Zeppelin", fundacion: 1967, activa: false },
+  { id: 3, nombre: "Queens of the Stone Age", fundacion: 1997, activa: true },
+  { id: 3, nombre: "Pearl Jam", fundacion: 1990, activa: true },
+];
 
 // ///// RESULTADO
 // // Nirvana no está activa
@@ -333,3 +335,62 @@ calcularDuracionTotal(nevermind)
 // // Led Zeppelin no está activa
 // // Queens of the Stone Age está activa desde el año 1997
 // // Pearl Jam está activa desde el año 1990
+
+
+
+
+
+
+
+
+
+
+var producto = {
+  id: 'ADA-020',
+  title: 'Gubergren sed est amet voluptua',
+  price: 123.75,
+  picture: 'https://i.kinja-img.com/gawker-media/image/upload/s--53mPze4a--/c_scale,f_auto,fl_progressive,q_80,w_800/1315358249455433031.jpg',
+  condition: 'nuevo',
+  free_shipping: true,
+  location: 'Capital Federal'
+};
+
+
+
+for (propiedad in producto) {
+  console.log(`La ${propiedad} tiene el valor ${producto[propiedad]}`)
+}
+
+
+
+  // return true si el objeto (object) tiene la propiedad (property) que llega por parametro
+  // property es un string
+  // sino return false
+
+function hasProperty(object, property) {
+    if (property in object) {
+      return true
+    }
+    else {
+      return false
+    }    
+}
+
+var user3 = {
+  username: 'ada_lovelace',
+  password: '1234567890!'
+};
+
+var user2 = {
+  username: 'grace_hopper',
+  password: '1234567890!',
+  email: 'grace@hopper.com'
+};
+
+console.log(hasProperty(user3,'email') ); // false
+console.log(hasProperty(user3,'password') ); // true
+console.log(hasProperty(user3,'id') ); // false
+
+console.log(hasProperty(user2,'email') ); // true
+console.log(hasProperty(user2,'password') ); // true
+console.log(hasProperty(user2,'id') ); // false
